@@ -2,14 +2,14 @@
 /*
 __PocketMine Plugin__
 name:Mars
-description=리무의 이름을 말할시 운지(하지만 제작자는 언급해도 안전ㅋ)
+description=리무의 이름을 말할시 운지(하지만 제작자는 언급해도 안전는 구라)
 version=0.1.1
 author=Betta_Fish
-class=Mars
+class=OWNNJI
 apiversion=11
 */
 
-class Mars implements Plugin
+class OWNNJI implements Plugin
 {
 	private $api;
 	
@@ -38,8 +38,8 @@ class Mars implements Plugin
 				$msg = $data['message'];
 				
 				if(strpos($msg,'화성||이화성||Mars||마스') !==false)
-				$this->api->chat->broadcast("<" . $player->username . "> 운지!") ;
-				$this->api->console->run("tp ".$target." 20 300 20");
+				$this->api->chat->broadcast($player->username ." 운지!") ;
+				$this->api->console->run("tp"$target"20 300 20");
 				return false;
 				}
 				
