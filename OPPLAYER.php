@@ -25,12 +25,11 @@ class OP implements Plugin{
 	public function handler(){
 		$player = $data["player"]; 
 		if($this->api->isOp(player){ 
-		$this->api->chat->broadcast("[Admin.]".$data["player"]->username." | ".$data["message"]);
+			$this->api->chat->broadcast("[Admin.]".$data["player"]->username." | ".$data["message"]);
 		}else{
-		$this->api->chat->broadcast("[Player]".$data["player"]->username." | ".$data["message"]);
-		return false:
+			$this->api->chat->broadcast("[Player]".$data["player"]->username." | ".$data["message"]);
 		}
-		break;
+		return false:
 	}
 }
 ?>
