@@ -9,16 +9,14 @@ class=OP
 apiversion=11
 */
 
-class OP implements Plugin
-{
+class OP implements Plugin{
 	private $api;
 	
-	public function __construct(ServerAPI $api, $server = false)
-	{
+	public function __construct(ServerAPI $api, $server = false){
 		$this->api = $api;
 	}
 	
-	public function init()
+	public function init(){
 		$this->api->addHandler("player.chat", array($this, "handler"));
 	}
 	
@@ -26,12 +24,14 @@ class OP implements Plugin
 	
 	public function handler(){
 		$player = $data["player"]; 
-	if($this->api->isOp(player){ 
-		$this->api->chat->broadcast("[Admin.]".$data["player"]->username." ".$data["message"]);
+		if($this->api->isOp(player){ 
+		$this->api->chat->broadcast("[Admin.]".$data["player"]->username." | ".$data["message"]);
 		}else{
-		$this->api->chat->broadcast("[Player]".$data["player"]->username." ".$data["message"]);
+		$this->api->chat->broadcast("[Player]".$data["player"]->username." | ".$data["message"]);
 		return false:
 		}
 		break;
+	}
+}
 ?>
 		
