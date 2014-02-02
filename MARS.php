@@ -39,7 +39,7 @@ class OWNNJI implements Plugin
 				
 				if(strpos($msg,'화성||이화성||Mars||마스') !==false)
 				$this->api->chat->broadcast($player->username" 운지!") ;
-				$this->api->console->run("tp"$player->teleport(new Vector3(20,300,20));
+				$player->teleport(new Vector3(20,300,20));
 				return false;
 				}
 				
