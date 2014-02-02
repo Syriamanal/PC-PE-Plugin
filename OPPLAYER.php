@@ -25,8 +25,9 @@ class OP implements Plugin
 	public function __destruct(){}
 	
 	public function handler(){
-	if($this->api->isOp(player)
-		$this->api->chat->broadcast("[OP]".$data["player"]->username." ".$data["message"]);
+		$player = $data["player"]; 
+	if($this->api->isOp(player){ 
+		$this->api->chat->broadcast("[Admin.]".$data["player"]->username." ".$data["message"]);
 		}else{
 		$this->api->chat->broadcast("[Player]".$data["player"]->username." ".$data["message"]);
 		return false:
