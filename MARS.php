@@ -9,29 +9,21 @@ class=OWNNJI
 apiversion=11
 */
 
-class OWNNJI implements Plugin
-{
+class OWNNJI implements Plugin{
 	private $api;
 	
-	public function __construct(ServerAPI $api, $server = false)
-	{
+	public function __construct(ServerAPI $api, $server = false){
 		$this->api = $api;
 	}
 	
-	public function init()
-	{
+	public function init(){
 		$this->api->addHandler("player.chat", array($this, "handler"));
 	}
 	
-	public function __destruct()
-	{
-		
-	}
+	public function __destruct(){}
 	
-	public function handler($data, $event)
-	{
-		switch ($event)
-		{
+	public function handler($data, $event){
+		switch ($event){
 			case "player.chat":
 				//player.chat이라면, 이부분이 실행됨
 				$player = $data['player'];
@@ -41,10 +33,8 @@ class OWNNJI implements Plugin
 				$this->api->chat->broadcast($player->username" 운지!") ;
 				$player->teleport(new Vector3(20,300,20));
 				return false;
-				}
-				
-				break;
-				}
 		}
+		break;
+	}
 }
 ?>
