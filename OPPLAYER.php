@@ -26,9 +26,9 @@ class OP implements Plugin
 	
 	public function handler(){
 	if($this->api->isOp(player)
-		$this->api->chat->broadcast("[무언가를 적으시오]".$data["player"]->username." ".$data["message"]);
+		$this->api->chat->broadcast("[OP]".$data["player"]->username." ".$data["message"]);
 		}else{
-		$this->api->chat->broadcast("[무언가를 적으시오]".$data["player"]->username." ".$data["message"]);
+		$this->api->chat->broadcast("[Player]".$data["player"]->username." ".$data["message"]);
 		return false:
 		}
 		break;
