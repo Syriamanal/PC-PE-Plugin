@@ -34,9 +34,9 @@ class tp implements Plugin{
 				$player->teleport(new Position($x, $y, $z, $level));
 			}
 			return "[tpall]모든 인원이 tp 됩니다.";
-		}else{
-			retrun "[tpall]OP만 명령어 사용이 가능합니다";
+			break;
 		}
+		retrun "[tpall]OP만 명령어 사용이 가능합니다";
 	}
 }
 ?>
