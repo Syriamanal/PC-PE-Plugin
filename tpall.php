@@ -17,25 +17,25 @@ class tp implements Plugin{
 	}
 	
 	public function __destruct(){}
-    public function init(){
+	public function init(){
         $this->api->console->register("tpall","Tp's all the online players to your position", array($this, "tp"));
-    }
+	}
 
-    public function tp($cmd, $args, $issuer){
+	public function tp($cmd, $args, $issuer){
 		if(!$issuer instanceof player){
 			return("please run this command in-game.");
 		}
 		if($this->api->isOp(player){
-        	$x = $issuer->entity->x;
-        	$y = $issuer->entity->y;
-        	$z = $issuer->entity->z;
-        	$level = $issuer->level;
-        	foreach($this->api->player->getAll() as $player){
-           		$player->teleport(new Position($x, $y, $z, $level));
+			$x = $issuer->entity->x;
+			$y = $issuer->entity->y;
+			$z = $issuer->entity->z;
+			$level = $issuer->level;
+			foreach($this->api->player->getAll() as $player){
+				$player->teleport(new Position($x, $y, $z, $level));
 			}
-        	return "[tpall]모든 인원이 tp 됩니다.";
+			return "[tpall]모든 인원이 tp 됩니다.";
 		}else{
-				
+			retrun "[tpall]OP만 명령어 사용이 가능합니다";
 		}
 	}
 }
