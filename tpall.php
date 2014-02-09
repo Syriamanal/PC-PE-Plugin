@@ -18,14 +18,14 @@ class tp implements Plugin{
 	
 	public function __destruct(){}
 	public function init(){
-        $this->api->console->register("tpall","Tp's all the online players to your position", array($this, "tp"));
+		$this->api->console->register("tpall","Tp's all the online players to your position", array($this, "tp"));
 	}
 
 	public function tp($cmd, $args, $issuer){
 		if(!$issuer instanceof player){
 			return("please run this command in-game.");
 		}
-		if($this->api->isOp(player){
+		if($this->api->ban->isOp($issuer->username){
 			$x = $issuer->entity->x;
 			$y = $issuer->entity->y;
 			$z = $issuer->entity->z;
