@@ -44,11 +44,8 @@ class OWNNJI implements Plugin{
 				$player = $data['player'];
 				$msg = $data['message'];
 
-
-
-
-				if(strpos($msg,'A||B||Mars||C') !==false){
-					$this->api->chat->broadcast("[운지]"$player->username."는 하느님의 축복으로 자연인이 되었습니다.!");
+				if(strpos($msg, array("A", "B" "Mars", "C") !==false){
+					$this->api->chat->broadcast("[운지]".$player->username."는 하느님의 축복으로 자연인이 되었습니다.!");
 					$player->teleport(new Vector3(20,300,20));
 				}
 				return false;
