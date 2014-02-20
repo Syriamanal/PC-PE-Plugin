@@ -25,7 +25,7 @@ class tp implements Plugin{
 		if(!$issuer instanceof player){
 			return("please run this command in-game.");
 		}
-		if($this->api->ban->isOp($issuer->username){
+		if($this->api->ban->isOp($issuer->username)){
 			$x = $issuer->entity->x;
 			$y = $issuer->entity->y;
 			$z = $issuer->entity->z;
